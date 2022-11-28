@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 01</title>
+</head>
+<body>
+    <h1>Qual é o seu nome?</h1>
+    <input name="nome" id="nome">
+    <button onclick="clicar()">OK</button>
+    <div id="res"></div>
+
+    <h1>Quantos anos você tem?</h1>
+    <input type="number" name="idade" id="idade">
+    <button onclick="clicar1()">OK</button>
+    <div id="res0"></div>
+
+    <h1>Quanto você pesa?</h1>
+    <input type="number" name="peso" id="peso">
+    <button onclick="soma()">OK</button>
+    <div id="res1"></div>
+
+    <h1>Quanto você mede em metros?</h1>
+    <input type="number" name="alt" id="alt">
+    <button onclick="conta()">OK</button>
+    <div id="res2"></div>
+
+    <script>
+        function clicar(){
+            var nome = window.document.querySelector('input#nome')
+            var res = window.document.querySelector('div#res')
+            var nome = String(nome.value)
+            res.innerHTML = `<p>Olá, ${nome}!</p>`  
+        }
+        function clicar1() {
+            var nome = window.document.querySelector('input#nome')
+            var nome = String(nome.value)
+            var idade = window.document.querySelector('input#idade')
+            var idade = Number(idade.value)
+            var res0 = window.document.querySelector('div#res0')
+            res0.innerHTML = `<p>${nome}, você tem ${idade} anos.</p>`
+        }
+        function soma() {
+            var idade = window.document.querySelector('input#idade')
+            var idade = Number(idade.value)
+            var peso = window.document.querySelector('input#peso')
+            var peso = Number(peso.value)
+            var res1 = window.document.querySelector('div#res1')
+            var s = idade + peso
+            res1.innerHTML = `<p>A soma da sua idade e peso é igual a 
+            ${s}.</p>`
+        }
+        function conta() {
+            var alt = window.document.querySelector('input#alt')
+            var alt = Number(alt.value)
+            var res2 = window.document.querySelector('div#res2')
+            var dm = alt * 10
+            var cm = alt * 100
+            var mm = alt * 1000
+            res2.innerHTML = `<p>Sua altura em decímetros é ${dm}.</p>
+            <p> Sua altura em centímetros é ${cm}.</p><p>Sua altura em mm é ${mm}.</p>`
+        }
+    </script>
+</body>
+</html>

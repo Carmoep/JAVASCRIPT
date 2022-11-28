@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 02</title>
+</head>
+<body>
+    <h1>Você nasceu em qual país?</h1>
+    <input type="text" name="uf" id="uf">
+    <button onclick="clicar()">OK</button>
+    <div id="res"></div>
+    <script>
+        function clicar(){
+            var uf = window.document.querySelector('input#uf')
+            var uf = String(uf.value)
+            var res = window.document.querySelector('div#res')
+            if (uf != 'Brasil') {
+                res.innerHTML = ('Você é estrangeiro')
+            } else
+                res.innerHTML = ('Você é brasileiro')
+        }
+    </script>
+</body>
+</html>
