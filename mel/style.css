@@ -1,0 +1,100 @@
+:root {
+  --cor-1 : pink;
+  --cor-2 : white;
+  --cor-3 : rgb(197, 0, 0);
+  --transition: all 0.3s linear;
+}
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 50vw;
+  }
+}
+body {
+  background: rgb(248, 220, 224);
+}
+header {
+  display: flex;
+  margin-top: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3rem;
+  color: brown;
+  border: 2px solid var(--cor-2);
+}
+.slider-cont {
+  border: 5px solid rgba(165, 42, 42, 0.6);
+  width: 80vw;
+  margin: 0 auto;
+  height: 70vh;
+  max-width: 700px;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: 4rem;
+}
+.slide {
+  position: absolute;
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  transition: all 0.25s ease-in-out;
+  text-align: center;
+}
+.slide-img {
+  height: fit-content;
+  width: 100%;
+  position: absolute;
+}
+.slide:nth-child(n) h3 {
+  position: absolute;
+  top: 5%;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  color: black;
+  text-transform: capitalize;
+  background-color: beige;
+  padding: 4px;
+  border: 1px solid var(--cor-2);
+  border-radius: 3px;
+}
+.slide:nth-child(3) h3 {
+  position: absolute;
+  top: 70%;
+}
+.slide:nth-child(8) h3 {
+  position: absolute;
+  top: 80%;
+}
+.slide:nth-child(9) h3 {
+  position: absolute;
+  top: 80%;
+}
+.last-img {
+  height: fit-content;
+  width: 100%;
+  object-fit: cover;
+}
+.btn-cont {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.7rem;
+}
+.prev-btn, .next-btn {
+  font-size: 1.7rem;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  padding: 1px 2px;
+  cursor: pointer;
+  color: brown;
+  background-color: var(--cor-1);
+  border: 2px solid brown;
+  border-radius: 5px;
+  margin: 0 0.3rem;
+  transition: var(--transition);
+}
+.prev-btn:hover, .next-btn:hover {
+  background-color: rgb(255, 255, 255, .5);
+  
+}
